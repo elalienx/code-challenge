@@ -11,15 +11,16 @@ interface iProps {
 
 export default function Search({ setFeed, setResults }: iProps) {
   // State
-  const [feedURL, setFeedURL] = useState("");
+  const [url, setURL] = useState("");
 
   // Properties
+  const sampleURL = "http://rss.cnn.com/rss/cnn_topstories.rss";
   const endpoint = "/api/rss?feed=";
 
   // Methods
   async function parseURL() {
     try {
-      const request = await fetch(endpoint + feedURL);
+      const request = await fetch(endpoint + url);
       const feed = await request.json();
 
       console.log(request);
@@ -51,15 +52,15 @@ export default function Search({ setFeed, setResults }: iProps) {
         <label className="input-field">
           <input
             type="text"
-            value={feedURL}
+            value={url}
             placeholder="cnn.com/tech"
-            onChange={(event) => setFeedURL(event.target.value)}
+            onChange={(event) => setURL(event.target.value)}
           />
         </label>
         <button onClick={() => parseURL()}>Create diagram</button>
         <small>
-          Example RSS feed:{" "}
-          <code>http://rss.cnn.com/rss/cnn_topstories.rss</code>
+          Click here for a sample feed:
+          <code onClick={() => setURL(sampleURL)}>{sampleURL}</code>
         </small>
       </div>
     </div>
