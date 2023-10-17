@@ -2,10 +2,11 @@
 
 ## Editors note
 
-Hi it was very fun to work on this project. Some notes on the frontend.
+Hi it was very fun to work on this project. Some notes on the frontend:
 
 - Although it seems an overkill to make a component for each input type, when they are only use once for each type in the whole app, this would allow us to make UI tests using Testing Library 🐙
 - Same with the data parsing methods `countReferences()`, `filterByMinimumValue()`, and `formatReferences()` as this allows to test them using Jest.
+- With more time, I would have stylized the input checkbox and input range (slider). I have done on it on other projects but ran out of time.
 
 ## Project dependencies
 
