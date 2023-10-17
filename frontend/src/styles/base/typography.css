@@ -3,6 +3,7 @@ body {
   font-family: "Lato", sans-serif;
   color: var(--color-navy);
   -webkit-font-smoothing: auto; /* To make text look great on Apple devices */
+  font-weight: 300;
 }
 
 h1,
@@ -19,7 +20,10 @@ h2 {
 }
 
 p {
-  font-size: var(--font-size);
-  font-weight: 300;
+  font-size: var(--font-size-paragraph);
   line-height: 1.5;
+}
+
+small {
+  font-size: var(--font-size-small);
 }

@@ -7,7 +7,8 @@
   --color-white: #ffffff;
 
   /* Text */
-  --font-size: 20px;
+  --font-size-paragraph: 20px;
+  --font-size-small: 15px;
 
   /* Spacing */
   --space-small: 8px;

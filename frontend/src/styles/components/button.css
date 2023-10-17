@@ -1,16 +1,16 @@
-button {
+.button {
   width: 240px;
   height: 62px;
   background-color: var(--color-white);
   color: var(--color-fucsia);
   border: none;
   border-radius: var(--border-radius);
-  font-size: var(--font-size);
+  font-size: var(--font-size-paragraph);
   font-weight: 600;
   transition: background-color 0.35s ease;
 }
 
-button:hover {
+.button:hover {
   background-color: var(--color-fucsia);
   color: var(--color-white);
 }

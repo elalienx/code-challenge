@@ -57,10 +57,14 @@ export default function Search({ setFeed, setResults }: iProps) {
             onChange={(event) => setURL(event.target.value)}
           />
         </label>
-        <button onClick={() => parseURL()}>Create diagram</button>
+        <button className="button" onClick={() => parseURL()}>
+          Create diagram
+        </button>
         <small>
           Click here for a sample feed:
-          <code onClick={() => setURL(sampleURL)}>{sampleURL}</code>
+          <button className="button-sample" onClick={() => setURL(sampleURL)}>
+            {sampleURL}
+          </button>
         </small>
       </div>
     </div>
