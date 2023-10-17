@@ -8,9 +8,17 @@
   font-size: var(--font-size-paragraph);
 }
 
+.input-field input[type="range"] {
+  width: 100%;
+}
+
 /* Desktop */
 @media (min-width: 750px) {
   .input-field input[type="text"] {
     width: 500px;
+  }
+
+  .input-field input[type="range"] {
+    width: 250px;
   }
 }
