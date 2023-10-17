@@ -12,11 +12,16 @@ Hi it was very fun to work on this project. Some notes on the frontend:
 
 - Added `node-fetch` to the backend as it was giving me an error of fetch is not defined. My theory is that I have a different version of Node installed in my machine than the one used to build the backend.
 - Added `react-d3-cloud` to render the world cloud on the screen.
+- Added `@fortawesome/react-fontawesome` to display nice icons on the navbar and news feed.
 
 ## Frontend diagram
 
 This is the frontend diagram/component tree with the props passed down. With more time, or actually on a bigger app we would use ContextAPI or Redux to pass the data down in combination of Router DOM for better page navigation.
 ![Component diagram](frontend-component-diagram.png)
+
+## Image credits
+
+- The 3d image of a boy looking at a chart illustration by [Icons 8](https://icons8.com/illustrations/illustration/3d-casual-life-young-man-drawing-a-curve-in-design-program) from [Ouch!](https://icons8.com/illustrations)
 
 ## Prerequisites
 
