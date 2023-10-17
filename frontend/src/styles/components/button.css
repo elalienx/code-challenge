@@ -1,8 +1,12 @@
+button {
+  font-family: var(--font-family);
+}
+
 .button {
-  width: 240px;
+  width: 228px;
   height: 62px;
   background-color: var(--color-white);
-  color: var(--color-fucsia);
+  color: var(--color-navy);
   border: none;
   border-radius: var(--border-radius);
   font-size: var(--font-size-paragraph);

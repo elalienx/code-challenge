@@ -1,9 +1,9 @@
 body {
   background-color: var(--color-grey);
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-family);
   color: var(--color-navy);
   -webkit-font-smoothing: auto; /* To make text look great on Apple devices */
-  font-weight: 300;
+  font-weight: var(--font-weight);
 }
 
 h1,
