@@ -1,0 +1,17 @@
+.item-feed {
+  display: flex;
+}
+
+.item-feed .icon {
+  margin-top: 2px; /* 2px to visually/optically align with the text */
+  margin-right: var(--space-medium);
+  padding: var(--space-small);
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size);
+}
+
+.item-feed p {
+  margin-bottom: 0;
+}

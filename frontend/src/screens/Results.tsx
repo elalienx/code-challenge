@@ -6,6 +6,7 @@ import InputCheckbox from "../components/InputCheckbox";
 import InputSlider from "../components/InputSlider";
 import WordCloudWrapper from "../components/WordCloudWrapper";
 import makeCloud from "../scripts/makeWordCloud";
+import ItemFeed from "../components/ItemFeed";
 
 interface iProps {
   feed: string[];
@@ -21,7 +22,7 @@ export default function Results({ feed }: iProps) {
   const data = makeCloud(feed, banWords, hasBanWords, ocurrences);
 
   // Components
-  const FeedTitles = feed.map((item, index) => <li key={index}>{item}</li>);
+  const Items = feed.map((item, index) => <ItemFeed key={index} item={item} />);
 
   return (
     <div id="results">
@@ -41,7 +42,7 @@ export default function Results({ feed }: iProps) {
         </section>
         <section className="feed">
           <h2>Original feed</h2>
-          <ol>{FeedTitles}</ol>
+          {Items}
         </section>
       </div>
     </div>

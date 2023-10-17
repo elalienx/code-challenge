@@ -9,8 +9,9 @@
 /* Components */
 @import url("./components/button.css");
 @import url("./components/input.css");
+@import url("./components/item-feed.css");
 @import url("./components/navigation-bar.css");
 
 /* Screens (pages) */
-@import url("./screens/search.css");
 @import url("./screens/results.css");
+@import url("./screens/search.css");

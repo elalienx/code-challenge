@@ -8,3 +8,9 @@
   gap: var(--space-small);
   margin-bottom: var(--space-big);
 }
+
+#results .feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+}
