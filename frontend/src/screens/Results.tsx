@@ -14,10 +14,10 @@ interface iProps {
   feed: string[];
 }
 
-export default function Result({ feed }: iProps) {
+export default function Results({ feed }: iProps) {
   // State
-  const [minium, setMinimum] = useState(5);
-  const [hasCommonWords, setHasCommonWords] = useState(false);
+  const [ocurrences, setOcurrences] = useState(5);
+  const [hasBanWords, setHasBanWords] = useState(false);
 
   // Properties
   const banWords = ["a", "and", "in", "of", "on", "or", "the", "to"];
@@ -32,9 +32,9 @@ export default function Result({ feed }: iProps) {
     const textToWordList: string[] = removeCommas.split(" ");
     const allWords: rWordCount = countRefences(textToWordList);
     const filteredWords: rWordCount = filterByWords(allWords, bannedWords);
-    const wordsToUse: rWordCount = hasCommonWords ? filteredWords : allWords;
-    const minumumWords: rWordCount = filterByMinimumValue(wordsToUse, minium);
-    const format: iWordCloudFormat[] = formatReferences(minumumWords);
+    const wordsToUse: rWordCount = hasBanWords ? filteredWords : allWords;
+    const minWords: rWordCount = filterByMinimumValue(wordsToUse, ocurrences);
+    const format: iWordCloudFormat[] = formatReferences(minWords);
 
     return format;
   }
@@ -55,21 +55,21 @@ export default function Result({ feed }: iProps) {
         <section className="controls">
           <h2>Controls</h2>
           <label className="input-field">
-            Minium ocurrences: {minium}/10
+            Minium ocurrences: {ocurrences}/10
             <br />
             <input
               type="range"
               min="1"
               max="10"
-              value={minium}
-              onChange={(event) => setMinimum(Number(event.target.value))}
+              value={ocurrences}
+              onChange={(event) => setOcurrences(Number(event.target.value))}
             />
           </label>
           <label className="input-field">
             <input
               type="checkbox"
-              checked={hasCommonWords}
-              onChange={() => setHasCommonWords(!hasCommonWords)}
+              checked={hasBanWords}
+              onChange={() => setHasBanWords(!hasBanWords)}
             />
             Exclude common words (and, or, the, etc.)
           </label>

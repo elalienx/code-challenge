@@ -1,7 +1,7 @@
 // Project files
 import { useState } from "react";
 import NavigationBar from "./components/NavigationBar";
-import Result from "./screens/Result";
+import Results from "./screens/Results";
 import Search from "./screens/Search";
 import "./styles/style.css";
 
@@ -14,7 +14,7 @@ export default function App() {
     <div className="App">
       <NavigationBar />
       {!results && <Search setFeed={setFeed} setResults={setResults} />}
-      {results && <Result feed={feed} />}
+      {results && <Results feed={feed} />}
     </div>
   );
 }
