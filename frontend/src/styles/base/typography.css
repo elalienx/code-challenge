@@ -12,16 +12,11 @@ p {
   margin-top: 0;
 }
 
-h1,
-h2 {
-  font-size: 36px;
-  line-height: 1.25;
-  font-weight: 400;
-}
-
 h2 {
   font-size: var(--font-size-paragraph);
   text-transform: uppercase;
+  margin-bottom: var(--space-small);
+  font-weight: var(--font-weight);
 }
 
 p {

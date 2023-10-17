@@ -10,6 +10,7 @@ import filterByMinimumValue from "../scripts/filterByMinimumValue";
 import filterByWords from "../scripts/filterByWords";
 import formatReferences from "../scripts/formatReferences";
 import InputCheckbox from "../components/InputCheckbox";
+import InputSlider from "../components/InputSlider";
 
 interface iProps {
   feed: string[];
@@ -44,7 +45,7 @@ export default function Results({ feed }: iProps) {
   const FeedTitles = feed.map((item, index) => <li key={index}>{item}</li>);
 
   return (
-    <div id="result">
+    <div id="results">
       <div className="container">
         <WordCloud
           data={data}
@@ -55,24 +56,18 @@ export default function Results({ feed }: iProps) {
         />
         <section className="controls">
           <h2>Controls</h2>
-          <label className="input-field">
-            Minium ocurrences: {ocurrences}/10
-            <br />
-            <input
-              type="range"
-              min="1"
-              max="10"
-              value={ocurrences}
-              onChange={(event) => setOcurrences(Number(event.target.value))}
-            />
-          </label>
+          <InputSlider
+            label="Minium ocurrences"
+            state={[ocurrences, setOcurrences]}
+            range={[0, 10]}
+          />
           <InputCheckbox
-            state={[hasBanWords, setHasBanWords]}
             label="Exclude common words (a, and, the, etc)"
+            state={[hasBanWords, setHasBanWords]}
           />
         </section>
         <section className="feed">
-          <h2>Original RSS feed</h2>
+          <h2>Original feed</h2>
           <ol>{FeedTitles}</ol>
         </section>
       </div>
