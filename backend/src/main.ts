@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { DOMParser } from "@xmldom/xmldom";
 import { marked } from "marked";
+import fetch from "node-fetch";
 
 createServer(router).listen(8126, () => {
   console.log("Listening on http://localhost:8126");

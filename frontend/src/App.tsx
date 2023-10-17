@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react";
-import "./App.css";
+// Project files
+import { useState } from "react";
+import NavigationBar from "./components/NavigationBar";
+import Result from "./screens/Result";
+import Search from "./screens/Search";
+import "./styles/style.css";
 
-export function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<Error>();
-  const [html, setHtml] = useState("");
-
-  useEffect(() => {
-    fetch("/api/challenge")
-      .then((r) => r.text())
-      .then(setHtml)
-      .catch(setError)
-      .finally(() => setIsLoading(false));
-  }, []);
-
-  if (error != null) {
-    console.error(error);
-    return <div>Error! Check console...</div>;
-  }
+export default function App() {
+  // State
+  const [feed, setFeed] = useState(Array<string>());
+  const [results, setResults] = useState(false);
 
   return (
     <div className="App">
-      {isLoading ? "Loading..." : null}
-      <article dangerouslySetInnerHTML={{ __html: html }} />
+      <NavigationBar />
+      {!results && <Search setFeed={setFeed} setResults={setResults} />}
+      {results && <Result feed={feed} />}
     </div>
   );
 }

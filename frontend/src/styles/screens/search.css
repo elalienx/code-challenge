@@ -1,0 +1,18 @@
+#search {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+#search .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-medium);
+  text-align: center;
+}
+
+#search .illustration {
+  max-width: 320px;
+}

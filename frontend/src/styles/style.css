@@ -1,0 +1,16 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400&family=Montserrat&display=swap");
+
+/* Base */
+@import url("./base/variables.css");
+@import url("./base/typography.css");
+@import url("./base/layout.css");
+
+/* Components */
+@import url("./components/button.css");
+@import url("./components/input.css");
+@import url("./components/navigation-bar.css");
+
+/* Screens (pages) */
+@import url("./screens/search.css");
+@import url("./screens/result.css");

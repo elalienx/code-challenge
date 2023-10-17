@@ -1,0 +1,24 @@
+:root {
+  /* Colors */
+  --color-fucsia: #81456d;
+  --color-grey: #efeef1;
+  --color-navy: #303b50;
+  --color-purple: #624d6f;
+  --color-white: #ffffff;
+
+  /* Text */
+  --font-size: 20px;
+
+  /* Spacing */
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-big: 32px;
+
+  /* Border radious */
+  --border-radius: 4px;
+
+  /* Media queries */
+  /* - mobile is the default */
+  /* - when min-width is bigger than 550px we are in table mode */
+  /* - when min-width is bigger than 750px we are in desktop mode */
+}

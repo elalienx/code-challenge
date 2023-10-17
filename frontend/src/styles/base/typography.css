@@ -1,0 +1,25 @@
+body {
+  background-color: var(--color-grey);
+  font-family: "Lato", sans-serif;
+  color: var(--color-navy);
+  -webkit-font-smoothing: auto; /* To make text look great on Apple devices */
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+p {
+  font-size: var(--font-size);
+  font-weight: 300;
+  line-height: 1.5;
+}
