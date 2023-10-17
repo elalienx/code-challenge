@@ -23,8 +23,6 @@ export default function Search({ setFeed, setResults }: iProps) {
       const request = await fetch(endpoint + url);
       const feed = await request.json();
 
-      console.log(request);
-
       onSucess(feed);
     } catch (error: any) {
       onFailure(error);

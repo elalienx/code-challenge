@@ -9,6 +9,7 @@ import countRefences from "../scripts/countReferences";
 import filterByMinimumValue from "../scripts/filterByMinimumValue";
 import filterByWords from "../scripts/filterByWords";
 import formatReferences from "../scripts/formatReferences";
+import InputCheckbox from "../components/InputCheckbox";
 
 interface iProps {
   feed: string[];
@@ -65,14 +66,10 @@ export default function Results({ feed }: iProps) {
               onChange={(event) => setOcurrences(Number(event.target.value))}
             />
           </label>
-          <label className="input-field">
-            <input
-              type="checkbox"
-              checked={hasBanWords}
-              onChange={() => setHasBanWords(!hasBanWords)}
-            />
-            Exclude common words (and, or, the, etc.)
-          </label>
+          <InputCheckbox
+            state={[hasBanWords, setHasBanWords]}
+            label="Exclude common words (a, and, the, etc)"
+          />
         </section>
         <section className="feed">
           <h2>Original RSS feed</h2>
