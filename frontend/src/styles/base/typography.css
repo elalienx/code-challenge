@@ -19,11 +19,12 @@ h2 {
   font-weight: 400;
 }
 
+h2 {
+  font-size: var(--font-size-paragraph);
+  text-transform: uppercase;
+}
+
 p {
   font-size: var(--font-size-paragraph);
   line-height: 1.5;
-}
-
-small {
-  font-size: var(--font-size-small);
 }

@@ -46,8 +46,8 @@ export default function Search({ setFeed, setResults }: iProps) {
       <div className="container">
         <img className="illustration" src={Illustration} />
         <p>
-          This website allows you to create a "Word cloud" diagram of the words
-          that appear the most in a news feed.
+          This website allows you to create a <b>Word cloud diagram</b> of the
+          words that appear the most in a news feed.
         </p>
         <label className="input-field">
           <input
@@ -60,12 +60,9 @@ export default function Search({ setFeed, setResults }: iProps) {
         <button className="button" onClick={() => parseURL()}>
           Create diagram
         </button>
-        <small>
-          Click here for a sample feed:
-          <button className="button-sample" onClick={() => setURL(sampleURL)}>
-            {sampleURL}
-          </button>
-        </small>
+        <button className="button-sample" onClick={() => setURL(sampleURL)}>
+          Click here for a sample feed: {sampleURL}
+        </button>
       </div>
     </div>
   );

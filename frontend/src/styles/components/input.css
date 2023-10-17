@@ -6,6 +6,8 @@
   width: 100%;
   height: 62px;
   padding: var(--space-medium);
+  color: var(--color-navy);
+  border: none;
   border-radius: var(--border-radius);
   font-size: var(--font-size-paragraph);
 }
