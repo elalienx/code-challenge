@@ -3,6 +3,7 @@ import { useState } from "react";
 import NavigationBar from "./components/NavigationBar";
 import Results from "./screens/Results";
 import Search from "./screens/Search";
+import "./scripts/fontawesome";
 import "./styles/style.css";
 
 export default function App() {
