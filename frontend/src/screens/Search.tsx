@@ -3,6 +3,7 @@ import { useState } from "react";
 
 // Project files
 import Illustration from "../assets/illustration.png";
+import InputText from "../components/InputText";
 
 interface iProps {
   setFeed: (feed: string[]) => void;
@@ -35,8 +36,8 @@ export default function Search({ setFeed, setResults }: iProps) {
   }
 
   function onFailure(error: Error) {
-    alert("Can't load the feed! Check the url & open the console for details");
     console.error(error);
+    alert("Can't load the feed! Check the url & open the console for details");
   }
 
   return (
@@ -47,14 +48,11 @@ export default function Search({ setFeed, setResults }: iProps) {
           This website allows you to create a <b>Word cloud diagram</b> of the
           words that appear the most in a news feed.
         </p>
-        <label className="input-field">
-          <input
-            type="text"
-            value={url}
-            placeholder="cnn.com/tech"
-            onChange={(event) => setURL(event.target.value)}
-          />
-        </label>
+        <InputText
+          label=""
+          state={[url, setURL]}
+          placeholder={"cnn.com/tech"}
+        />
         <button className="button" onClick={() => parseURL()}>
           Create diagram
         </button>

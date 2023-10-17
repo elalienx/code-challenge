@@ -10,7 +10,7 @@ export default function InputSlider({ state, label, range }: iProps) {
 
   return (
     <label className="input-field">
-      {label} {value}/{maximum}
+      {label}: {value}/{maximum}
       <br />
       <input
         type="range"
