@@ -1,9 +1,5 @@
-.input-field {
-  display: block;
-}
-
 .input-field input[type="text"] {
-  width: 100%;
+  width: 280px;
   height: 62px;
   padding: var(--space-medium);
   color: var(--color-navy);
