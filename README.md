@@ -7,6 +7,13 @@ Hi it was very fun to work on this project. Some notes on the frontend:
 - Although it seems an overkill to make a component for each input type, when they are only use once for each type in the whole app, this would allow us to make UI tests using Testing Library 🐙
 - Same with the data parsing methods `countReferences()`, `filterByMinimumValue()`, and `formatReferences()` as this allows to test them using Jest.
 
+## What branch to review?
+
+This project has 2 branches:
+
+- `solve-it-in-the-frontend`: The branch given to solve the code challenge. It has a unoptimized version of the code but is easy to read.
+- `performance`: Do you care about avoiding expensive operations on the frontend? This branch has you covered! It uses React's `useMemo()` to cache the most expensive operations required to format the word cloud and render the news feed below it. However, the optimization requires extra code to split the method `makeCloud()` into 3 methods to cache the first 2 methods with `useMemo()`.
+
 ## Project dependencies
 
 - Added `node-fetch` to the backend as it was giving me an error of fetch is not defined. My theory is that I have a different version of Node installed in my machine than the one used to build the backend.
