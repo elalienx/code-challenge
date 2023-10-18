@@ -5,7 +5,7 @@
 }
 
 .input.checkbox input[type="checkbox"] {
-  --outer-size: 24px;
+  --outer-size: 25px;
 
   display: grid;
   place-content: center;
@@ -19,7 +19,7 @@
 }
 
 .input.checkbox input[type="checkbox"]::before {
-  --inner-size: 12px;
+  --inner-size: 15px;
 
   content: "";
   width: var(--inner-size);

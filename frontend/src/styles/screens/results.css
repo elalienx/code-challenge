@@ -2,15 +2,10 @@
   background-color: var(--color-white);
 }
 
-#results .controls {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-medium);
-  margin-bottom: var(--space-big);
-}
-
+#results .controls,
 #results .feed {
   display: flex;
   flex-direction: column;
   gap: var(--space-medium);
+  margin-bottom: var(--space-big);
 }
