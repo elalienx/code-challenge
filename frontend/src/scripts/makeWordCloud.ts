@@ -16,7 +16,9 @@ export function parseWords(data: string[]) {
 }
 
 export function filterWords(allWords: rWordCount, bannedWords: string[]) {
-  return filterByWords(allWords, bannedWords);
+  const result = filterByWords(allWords, bannedWords);
+
+  return result;
 }
 
 export function formatWords(words: rWordCount, ocurrences: number) {
