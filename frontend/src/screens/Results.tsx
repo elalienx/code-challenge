@@ -1,12 +1,13 @@
 // Node modules
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 // Project files
 import InputCheckbox from "../components/InputCheckbox";
 import InputRange from "../components/InputRange";
 import WordCloudWrapper from "../components/WordCloudWrapper";
-import makeCloud from "../scripts/makeWordCloud";
 import ItemFeed from "../components/ItemFeed";
+import BannedWords from "../data/banned-words.json";
+import { formatWords, filterWords, parseWords } from "../scripts/makeWordCloud";
 
 interface iProps {
   feed: string[];
@@ -16,13 +17,22 @@ export default function Results({ feed }: iProps) {
   // State
   const [ocurrences, setOcurrences] = useState(5);
   const [hasBanWords, setHasBanWords] = useState(false);
+  const allWords = useMemo(() => parseWords(feed), []);
+  const filteredWords = useMemo(() => filterWords(allWords, BannedWords), []);
+  const Items = useMemo(() => createFeed(feed), []);
 
   // Properties
-  const banWords = ["a", "and", "in", "of", "on", "or", "the", "to"];
-  const data = makeCloud(feed, banWords, hasBanWords, ocurrences);
+  const selectedWords = hasBanWords ? filteredWords : allWords;
+  const data = formatWords(selectedWords, ocurrences);
 
-  // Components
-  const Items = feed.map((item, index) => <ItemFeed key={index} item={item} />);
+  // Methods
+  function createFeed(feed: string[]) {
+    const result = feed.map((item, index) => (
+      <ItemFeed key={index} item={item} />
+    ));
+
+    return result;
+  }
 
   return (
     <div id="results">
