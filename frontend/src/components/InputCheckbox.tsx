@@ -7,7 +7,7 @@ export default function InputCheckbox({ label, state }: iProps) {
   const [value, setValue] = state;
 
   return (
-    <label className="input-field">
+    <label className="input checkbox">
       <input
         type="checkbox"
         checked={value}

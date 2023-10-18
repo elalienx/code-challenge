@@ -8,7 +8,7 @@ export default function InputText({ label, state, placeholder }: iProps) {
   const [value, setValue] = state;
 
   return (
-    <label className="input-field">
+    <label className="input text">
       {label}
       <input
         type="text"

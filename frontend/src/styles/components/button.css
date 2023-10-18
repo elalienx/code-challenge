@@ -7,7 +7,7 @@
   border: none;
   border-radius: var(--border-radius);
   font-family: var(--font-family);
-  font-size: var(--font-size-paragraph);
+  font-size: var(--font-size);
   font-weight: 600;
   transition: background-color 0.35s ease;
   cursor: pointer;

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 // Project files
 import InputCheckbox from "../components/InputCheckbox";
-import InputSlider from "../components/InputSlider";
+import InputRange from "../components/InputRange";
 import WordCloudWrapper from "../components/WordCloudWrapper";
 import makeCloud from "../scripts/makeWordCloud";
 import ItemFeed from "../components/ItemFeed";
@@ -30,8 +30,8 @@ export default function Results({ feed }: iProps) {
         <WordCloudWrapper data={data} />
         <section className="controls">
           <h2>Controls</h2>
-          <InputSlider
-            label="Minium ocurrences"
+          <InputRange
+            label="Minimum ocurrences:"
             state={[ocurrences, setOcurrences]}
             range={[0, 10]}
           />

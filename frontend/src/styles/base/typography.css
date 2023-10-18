@@ -13,13 +13,13 @@ p {
 }
 
 h2 {
-  font-size: var(--font-size-paragraph);
+  font-size: var(--font-size);
   text-transform: uppercase;
   margin-bottom: var(--space-small);
   font-weight: var(--font-weight);
 }
 
 p {
-  font-size: var(--font-size-paragraph);
+  font-size: var(--font-size);
   line-height: 1.5;
 }
