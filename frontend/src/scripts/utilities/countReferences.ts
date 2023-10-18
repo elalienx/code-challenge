@@ -1,5 +1,5 @@
 // Project files
-import rWordCount from "../interfaces/rWordCount";
+import rWordCount from "../../interfaces/rWordCount";
 
 export default function countReferences(array: string[]): rWordCount {
   const result: rWordCount = {};

@@ -1,5 +1,5 @@
 // Project files
-import rWordCount from "../interfaces/rWordCount";
+import rWordCount from "../../interfaces/rWordCount";
 
 export default function filterByMinimumValue(count: rWordCount, min: number) {
   const result: rWordCount = {};

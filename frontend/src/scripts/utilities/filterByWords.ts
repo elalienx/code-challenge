@@ -1,4 +1,4 @@
-import rWordCount from "../interfaces/rWordCount";
+import rWordCount from "../../interfaces/rWordCount";
 
 export default function filterByWords(words: rWordCount, banWords: string[]) {
   const result = { ...words };

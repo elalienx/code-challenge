@@ -1,18 +1,11 @@
 // Project files
 import iWordCloudFormat from "../interfaces/iWordCloudFormat";
 import rWordCount from "../interfaces/rWordCount";
-import countReferences from "./countReferences";
-import filterByMinimumValue from "./filterByMinimumValue";
-import filterByWords from "./filterByWords";
-import formatReferences from "./formatReferences";
+import countReferences from "./utilities/countReferences";
+import filterByMinimumValue from "./utilities/filterByMinimumValue";
+import filterByWords from "./utilities/filterByWords";
+import formatReferences from "./utilities/formatReferences";
 
-/**
- * Note:
- * This has been refactored to focus on perfomance over readibily.
- *
- * With even more time it could be improved but never match the clarity
- * of the unoptimized version.
- */
 export function parseWords(data: string[]) {
   const listToText: string = data.join();
   const removeCommas: string = listToText.replaceAll(",", "");
