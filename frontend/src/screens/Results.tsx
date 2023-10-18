@@ -33,7 +33,7 @@ export default function Results({ feed }: iProps) {
           <InputRange
             label="Minimum ocurrences:"
             state={[ocurrences, setOcurrences]}
-            range={[0, 10]}
+            range={[1, 10]}
           />
           <InputCheckbox
             label="Exclude common words (a, and, the, etc)"

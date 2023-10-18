@@ -11,6 +11,7 @@
 /* Slider label */
 .input.range {
   font-size: var(--font-size);
+  padding-bottom: var(--space-small);
 }
 
 /* Slider line */

@@ -6,7 +6,7 @@ interface iProps {
 
 export default function InputRange({ state, label, range }: iProps) {
   const [value, setValue] = state;
-  const [minium, maximum] = range;
+  const [minimum, maximum] = range;
 
   return (
     <label className="input range">
@@ -14,7 +14,7 @@ export default function InputRange({ state, label, range }: iProps) {
       <br />
       <input
         type="range"
-        min={minium}
+        min={minimum}
         max={maximum}
         value={value}
         onChange={(event) => setValue(Number(event.target.value))}
