@@ -1,7 +1,7 @@
 // Project files
 import iWordCloudFormat from "../interfaces/iWordCloudFormat";
 import rWordCount from "../interfaces/rWordCount";
-import countRefences from "./countReferences";
+import countReferences from "./countReferences";
 import filterByMinimumValue from "./filterByMinimumValue";
 import filterByWords from "./filterByWords";
 import formatReferences from "./formatReferences";
@@ -19,11 +19,16 @@ export default function makeWorldCloud(
   hasBanWords: boolean,
   ocurrences: number
 ) {
+  // Can be memoized
+  // Arguments(data:string[], bannedWords:string[])
   const listToText: string = data.join();
   const removeCommas: string = listToText.replaceAll(",", "");
   const textToWordList: string[] = removeCommas.split(" ");
-  const allWords: rWordCount = countRefences(textToWordList);
+  const allWords: rWordCount = countReferences(textToWordList);
   const filteredWords: rWordCount = filterByWords(allWords, bannedWords);
+
+  // Can be dynamic
+  // Arguments(hasBanWords: boolean, ocurrences: number)
   const wordsToUse: rWordCount = hasBanWords ? filteredWords : allWords;
   const minWords: rWordCount = filterByMinimumValue(wordsToUse, ocurrences);
   const format: iWordCloudFormat[] = formatReferences(minWords);
