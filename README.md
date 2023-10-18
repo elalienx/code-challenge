@@ -11,8 +11,8 @@ Hi it was very fun to work on this project. Some notes on the frontend:
 
 This project has 2 branches:
 
-- `solve-it-in-the-frontend`: The branch given to solve the code challenge. It has a unoptimized version of the code but is easy to read.
-- `performance`: Do you care about avoiding expensive operations on the frontend? This branch has you covered! It uses React's `useMemo()` to cache the most expensive operations required to format the word cloud and render the news feed below it. However, the optimization requires extra code to split the method `makeCloud()` into 3 methods to cache the first 2 methods with `useMemo()`.
+- `solve-it-in-the-frontend`: The branch given to solve the code challenge. It has an unoptimized version of the code but is easy to read.
+- `performance`: Do you care about avoiding expensive operations on the frontend? This branch has you covered! It uses React's `useMemo()` to cache the most expensive operations required to format the word cloud and render the news feed below it. However, the optimization requires extra code to split the method `makeCloud()` into 3 to cache the first 2.
 
 ## Project dependencies
 
