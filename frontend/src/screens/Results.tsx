@@ -2,10 +2,10 @@
 import { useMemo, useState } from "react";
 
 // Project files
+import MemoFeed from "../components/MemoFeed";
 import InputCheckbox from "../components/InputCheckbox";
 import InputRange from "../components/InputRange";
 import WordCloudWrapper from "../components/WordCloudWrapper";
-import ItemFeed from "../components/ItemFeed";
 import BannedWords from "../data/banned-words.json";
 import { formatWords, filterWords, parseWords } from "../scripts/makeWordCloud";
 
@@ -17,22 +17,12 @@ export default function Results({ feed }: iProps) {
   // State
   const [ocurrences, setOcurrences] = useState(5);
   const [hasBanWords, setHasBanWords] = useState(false);
-  const allWords = useMemo(() => parseWords(feed), []);
-  const filteredWords = useMemo(() => filterWords(allWords, BannedWords), []);
-  const Items = useMemo(() => createFeed(feed), []);
 
   // Properties
+  const allWords = useMemo(() => parseWords(feed), []);
+  const filteredWords = useMemo(() => filterWords(allWords, BannedWords), []);
   const selectedWords = hasBanWords ? filteredWords : allWords;
   const data = formatWords(selectedWords, ocurrences);
-
-  // Methods
-  function createFeed(feed: string[]) {
-    const result = feed.map((item, index) => (
-      <ItemFeed key={index} item={item} />
-    ));
-
-    return result;
-  }
 
   return (
     <div id="results">
@@ -52,7 +42,7 @@ export default function Results({ feed }: iProps) {
         </section>
         <section className="feed">
           <h2>Original feed</h2>
-          {Items}
+          <MemoFeed feed={feed} />
         </section>
       </div>
     </div>
